@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeWorlds | Minecraft Server</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://wallpaperaccess.com');
+            background-size: cover;
+            border-bottom: 5px solid #c62828;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #f44336;
+            text-shadow: 3px 3px #000;
+        }
+        .server-status {
+            background: #2d2d2d;
+            padding: 20px;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid #444;
+        }
+        .ip-box {
+            font-weight: bold;
+            color: #ff5252;
+            cursor: pointer;
+            padding: 10px;
+            background: #111;
+            border-radius: 5px;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature-card {
+            background: #333;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 250px;
+            border-left: 4px solid #f44336;
+        }
+        footer {
+            padding: 20px;
+            background: #111;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .btn-donate {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: #c62828;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn-donate:hover {
+            background: #ff5252;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TIMEWORLDS</h1>
+    <p>Твое время — твои правила. Лучшее выживание здесь!</p>
+    <div class="server-status">
+        Айпи сервера: <span class="ip-box" id="ip" onclick="copyIP()">://timeworlds.com</span>
+        <p style="font-size: 0.8em; color: #aaa;">(Нажми, чтобы скопировать)</p>
+    </div>
+</header>
+
+<section>
+    <h2>О нашем сервере</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h3>Выживание</h3>
+            <p>Классическое выживание с уникальными плагинами и экономикой.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Донат</h3>
+            <p>Честные привилегии, которые не ломают баланс игры.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Оружие</h3>
+            <p>Уникальные плагины на оружие для самых жарких битв!</p>
+        </div>
+    </div>
+    
+    <a href="#" class="btn-donate">МАГАЗИН ДОНАТА</a>
+</section>
+
+<footer>
+    &copy; 2024 TimeWorlds Project. Сервер не связан с Mojang AB.
+</footer>
+
+<script>
+    function copyIP() {
+        const ip = document.getElementById('ip').innerText;
+        navigator.clipboard.writeText(ip);
+        alert('IP скопирован: ' + ip);
+    }
+</script>
+
+</body>
+</html>
